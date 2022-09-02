@@ -96,3 +96,11 @@ while True:
     if topi.xcor() < -390:
         topi.goto (0, 0)
         topi.lx *= -1
+
+    # Veprimi i topit me raketat
+    if (topi.xcor() > 340 and topi.xcor() < 350) and (topi.ycor() < raketa_b.ycor() + 40) and topi.ycor() > raketa_b.ycor() - 40:
+        topi.setx(340)
+        topi.lx *= -1
+    if (topi.xcor() > -340 and topi.xcor() < -350) and (topi.ycor() < raketa_a.ycor() + 40) and topi.ycor() > raketa_a.ycor() - 40:
+        topi.setx(-340)
+        topi.lx *= -1

@@ -39,9 +39,9 @@ topi.goto(0, 0)
 # Funksionet
 
 def raketa_a_lart():
-    y = raketa_a.ycor()
-    y += 20
-    raketa_a.sety(y)
+    y = raketa_a.ycor() # Ne fillim ne percaktojme pozicionin e raketes. nepermjet funksionit builtin te turtle .ycor()
+    y += 20             # Meqe do levizim lart, dmth koordinata do shtohet me +
+    raketa_a.sety(y)    # Percaktojme koordinaten e re me builtin funksion te turtle .sety(y), ku y brenda kllapes eshte koordinata e re
 
 def raketa_a_poshte():
     y = raketa_a.ycor()
@@ -58,13 +58,16 @@ def raketa_b_poshte():
     y += -20
     raketa_b.sety(y)
 
+# Me siper ne percaktuam funksionet, por nuk i kemi therritur te ekzekutohen akoma. Keshtu qe krijojme
+# veprimet e tastjeres si me poshte
+
 # Veprimet e tastjeres (Keyboard)
 
 dritare.listen() # kjo ben qe te presi per inputin e tasjteres
-dritare.onkeypress(raketa_a_lart, "w")
-dritare.onkeypress(raketa_a_poshte, "s")
-dritare.onkeypress(raketa_b_lart, "8")
-dritare.onkeypress(raketa_b_poshte, "2")
+dritare.onkeypress(raketa_a_lart, "w")   # Tasti qe do levize raketen A lart do jete "w"
+dritare.onkeypress(raketa_a_poshte, "s") # Tasti qe do levize raketen A poshte do jete "s"
+dritare.onkeypress(raketa_b_lart, "8")   # Tasti qe do levize raketen B lart do jete "8"
+dritare.onkeypress(raketa_b_poshte, "2") # Tasti qe do levize raketen B poshte do jete "2"
 
 # Main game loop
 while True:
